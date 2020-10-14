@@ -1,3 +1,11 @@
+<?php
+include('server.php');
+
+if(empty($_SESSION['username'])){
+    header('location: login.php');
+}
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -19,13 +27,30 @@
            	   	   <li><a href="#">QUIZZES</a></li>
            	   </ul>
              </nav>
+      <div class="details">
+        <?php if(isset($_SESSION['success'])):?>
+        <div class="error success">
+            <h2>
+                <?php
+                // echo $_SESSION['success'];
+                unset($_SESSION['success']);
+                ?>
+            </h2>
+        </div>
+        <?php endif ?>
+
+        
+    </div>
         </div>
            <img src="images/menu.png" id="menubtn">
            <div class="header_contents">
                 <img src="images/logo.png" class="logo">
                 <div class="heading"><p>VACANZA'20</p></div>
+                <div class="heading__2"><?php if(isset($_SESSION['username'])): ?>
+            <h4 style="margin: 20px;">Welcome <?php echo $_SESSION['username']; ?></h4>
+            <?php endif ?></div>
                 <ul>
-                  <li><a href="#">REGISTER <button><i class="fas fa-arrow-right"></i></button></a></li>
+                  <li><a href="index.php?logout='1'">LOG OUT <button><i class="fas fa-arrow-right"></i></button></a></li>
                   <li><a href="#">START QUIZ <button><i class="fas fa-arrow-right"></i></button></a></li>
                 </ul>            
            </div>

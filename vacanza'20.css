@@ -80,9 +80,17 @@
 }
 .header_contents ul{
 	position: absolute;
-	margin-top: 35%;
+	margin-top: 42%;
 	color: white;
 	list-style-type: none;
+}
+.heading__2{
+	position: absolute;
+	margin-top: 33%;
+	color: white;
+	font-size: 2vw;
+	font-family: 'Raleway',sans-serif;
+	letter-spacing: 1px;
 }
 .header_contents ul li{
 	display: inline-block;
@@ -131,8 +139,8 @@ li:hover button{
 }
 .right-col img{  
     clip-path:polygon(50% 0, 100% 0, 100% 100%, 0 100%); 
-    width: 25rem;
-    height: 17.8rem;
+    width: 21rem;
+    height: 21.8rem;
 }
 .heading1{
 	font-size: 25px;
